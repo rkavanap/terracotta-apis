@@ -169,4 +169,6 @@ public interface InvocationBuilder<M extends EntityMessage, R extends EntityResp
    * @throws MessageCodecException if there is an issue with encoding {@link M}/decoding {@link R}
    */
   public InvokeFuture<R> invoke() throws MessageCodecException;
+
+  public void invokeWithCallBack(MessageCallback<R> messageCallBack) throws MessageCodecException;
 }
